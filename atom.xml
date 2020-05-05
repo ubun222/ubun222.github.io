@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ubun222.github.io</id>
     <title>Gridea</title>
-    <updated>2020-05-05T12:39:40.857Z</updated>
+    <updated>2020-05-05T12:51:02.815Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ubun222.github.io"/>
     <link rel="self" href="https://ubun222.github.io/atom.xml"/>
@@ -24,6 +24,7 @@
 占据的宽度正好是1个中文宽度</p>
 <p>&amp;+thinsp; <br>
 它是em之六分之一宽。</p>
+<p>因为这个  Gridea  客户端app编辑的文章同步后，空格全被过滤消失了，我首先是打算在GitHub网页中手动加上HTML代码来显示空格，但是只要本地客户端同步，GitHub网页上的HTML文件被覆盖，所以只能在本地编辑文章时想办法显示空格，于是我索性直接将** **输入到文章内需要空格的地方，这个Gridea文本编辑器自动识别为HTML代码，于是问题就解决了。</p>
 ]]></content>
     </entry>
     <entry>
