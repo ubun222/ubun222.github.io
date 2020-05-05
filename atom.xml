@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ubun222.github.io</id>
     <title>Gridea</title>
-    <updated>2020-05-05T13:04:05.447Z</updated>
+    <updated>2020-05-05T13:06:44.451Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ubun222.github.io"/>
     <link rel="self" href="https://ubun222.github.io/atom.xml"/>
@@ -46,6 +46,7 @@ Config.plist设置Misc-&gt;Boot-&gt; PickerMode =External</p>
 屏幕快照可以使用F10拍摄。</p>
 <p>在oc config.plist 中 PollAppleHotKeys 和 KeySupport 需要为YES以使用苹果原生快捷键。<br>
 ShowPicker 为NO跳过倒计时<br>
+PickerMode =External 以使用外部GUI<br>
 并在启动参数删除-v<br>
 来提升体验</p>
 <p>苹果原生快捷键：<br>
