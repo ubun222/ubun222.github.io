@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ubun222.github.io</id>
     <title>Gridea</title>
-    <updated>2020-05-05T12:57:54.927Z</updated>
+    <updated>2020-05-05T13:04:05.447Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ubun222.github.io"/>
     <link rel="self" href="https://ubun222.github.io/atom.xml"/>
@@ -24,7 +24,9 @@
 占据的宽度正好是1个中文宽度</p>
 <p>&amp; thinsp; <br>
 它是em之六分之一宽。</p>
-<p>因为这个  Gridea  客户端app编辑的文章同步后，段落开头的空格全被过滤消失了，我首先是打算在GitHub网页中手动加上HTML代码来显示空格，但是只要本地客户端同步，GitHub网页上的HTML文件就被覆盖，所以只能在本地编辑文章时想办法显示空格，于是我索性直接将&amp; nbsp;输入到文章内需要空格的地方，这个Gridea文本编辑器自动识别为HTML代码，于是问题就解决了。</p>
+<p>因为这个  Gridea  客户端app编辑的文章同步后，段落开头的空格全被过滤消失了，我首先是打算在GitHub网页中手动加上HTML代码来显示空格，但是只要本地客户端同步，GitHub网页上的HTML文件就被覆盖，所以只能在本地编辑文章时想办法显示空格，于是我索性直接将&amp; nbsp;输入到文章开头需要空格的地方，这个Gridea文本编辑器自动识别为HTML代码，于是问题就解决了。</p>
+<p>但是想要打出中间不带空格的 &amp; emsp; 暂时没有想到方法，所以本篇在所有的HTML代码的&amp;后都有一个空格来防止在网页中变成显示空格</p>
+<p>只是比较麻烦的解决了段落开头空格被忽略的问题</p>
 ]]></content>
     </entry>
     <entry>
