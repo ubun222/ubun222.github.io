@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>文章归档 | Gridea</title>
+<title>OpenCore的GUI插件 | Gridea</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,7 +18,9 @@
 
 
 
-    <meta name="description" content="温故而知新">
+    <meta name="description" content="下载地址：https://github.com/n-d-k/NdkBootPicker/releases/tag/0.1.8
+用法介绍：https://github.com/n-d-k/NdkBootPicker/blob/0.1.8/RE..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -88,71 +90,52 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
+          <div class="post-detail">
+            <h2 class="post-title">OpenCore的GUI插件</h2>
+            <div class="post-date">2020-05-05</div>
+            
+            <div class="post-content" v-pre>
+              <p>下载地址：https://github.com/n-d-k/NdkBootPicker/releases/tag/0.1.8<br>
+用法介绍：https://github.com/n-d-k/NdkBootPicker/blob/0.1.8/README.md</p>
+<p>以下为用法搬运：<br>
+NdkBootPicker.efi需要位于EFI / OC / Drivers中并设置为在config.plist中加载*<br>
+icon文件夹需要复制到EFI / OC /文件夹中。<br>
+Config.plist设置Misc-&gt;Boot-&gt; PickerMode =External</p>
+<p>要编译NdkBootPicker.efi，请在终端上运行“ ./ndk-macbuild.tool”（需要安装Xcode和Xcode命令行工具，并在编译之前打开xcode接受许可协议）。</p>
+<p>Bios日期/时间，OpenCore版本可以通过空格键显示。<br>
+屏幕快照可以使用F10拍摄。</p>
+<p>在oc config.plist 中 PollAppleHotKeys 和 KeySupport 需要为YES以使用苹果原生快捷键。<br>
+ShowPicker 为NO跳过倒计时<br>
+并在启动参数删除-v<br>
+来提升体验</p>
+<p>苹果原生快捷键：<br>
+cmd+v：启用-v跑码<br>
+cmd+opt+p+r：重置NVRAM<br>
+cmd+r：启动恢复分区<br>
+cmd+s：启动至单用户模式<br>
+option/alt：在ShowPicker设置成NO时显示引导项选择界面，ALT不可用时可用ESC代替<br>
+cmd+c+-：关闭主板兼容性检查, 等同于添加引导标识符 -no_compat_check<br>
+Shift: 安全模式</p>
+<p>我需要在开机后马上开始不停按option/alt或者ESC来显示引导界面来检查这个GUI是否生效，并使用F10拍摄快照。<br>
+以下为GUI效果<br>
+<img src="https://ubun222.github.io/post-images/1588682315606.png" alt="" loading="lazy"></p>
 
-          <h2 class="archives-title">文章归档</h2>
-          <div class="archives-container">
+            </div>
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2020</h2>
-              
-                
-                  <article class="post">
-                    <a href="https://ubun222.github.io/post/yi-xie-html-zhong-de-kong-ge/">
-                      <h2 class="post-title">
-                        一些HTML中的空格
-                      </h2>
-                    </a>
-                  </article>
-                
-              
-                
-                  <article class="post">
-                    <a href="https://ubun222.github.io/post/opencore-de-gui-cha-jian/">
-                      <h2 class="post-title">
-                        OpenCore的GUI插件
-                      </h2>
-                    </a>
-                  </article>
-                
-              
-                
-                  <article class="post">
-                    <a href="https://ubun222.github.io/post/helloblog/">
-                      <h2 class="post-title">
-                        关于 这个博客是怎么来的
-                      </h2>
-                    </a>
-                  </article>
-                
-              
-                
-              
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2018</h2>
-              
-                
-              
-                
-              
-                
-              
-                
-                  <article class="post">
-                    <a href="https://ubun222.github.io/post/hello-gridea/">
-                      <h2 class="post-title">
-                        Hello Gridea
-                      </h2>
-                    </a>
-                  </article>
-                
-              
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://ubun222.github.io/post/helloblog/">
+                  <h3 class="post-title">
+                    关于 这个博客是怎么来的
+                  </h3>
+                </a>
+              </div>
             
+
+            
+
           </div>
-
-          <div class="pagination-container">
-  
-  
-</div>
 
         </div>
       </div>

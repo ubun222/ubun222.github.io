@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ubun222.github.io</id>
     <title>Gridea</title>
-    <updated>2020-05-03T12:19:48.190Z</updated>
+    <updated>2020-05-05T12:39:40.857Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ubun222.github.io"/>
     <link rel="self" href="https://ubun222.github.io/atom.xml"/>
@@ -10,6 +10,54 @@
     <logo>https://ubun222.github.io/images/avatar.png</logo>
     <icon>https://ubun222.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[一些HTML中的空格]]></title>
+        <id>https://ubun222.github.io/post/yi-xie-html-zhong-de-kong-ge/</id>
+        <link href="https://ubun222.github.io/post/yi-xie-html-zhong-de-kong-ge/">
+        </link>
+        <updated>2020-05-05T12:33:34.000Z</updated>
+        <content type="html"><![CDATA[<p>&amp;+nbsp; <br>
+不换行空格 按下space键产生的空格</p>
+<p>&amp;+ensp; <br>
+它等同于字体度的一半</p>
+<p>&amp;+emsp; <br>
+占据的宽度正好是1个中文宽度</p>
+<p>&amp;+thinsp; <br>
+它是em之六分之一宽。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenCore的GUI插件]]></title>
+        <id>https://ubun222.github.io/post/opencore-de-gui-cha-jian/</id>
+        <link href="https://ubun222.github.io/post/opencore-de-gui-cha-jian/">
+        </link>
+        <updated>2020-05-05T11:53:17.000Z</updated>
+        <content type="html"><![CDATA[<p>下载地址：https://github.com/n-d-k/NdkBootPicker/releases/tag/0.1.8<br>
+用法介绍：https://github.com/n-d-k/NdkBootPicker/blob/0.1.8/README.md</p>
+<p>以下为用法搬运：<br>
+NdkBootPicker.efi需要位于EFI / OC / Drivers中并设置为在config.plist中加载*<br>
+icon文件夹需要复制到EFI / OC /文件夹中。<br>
+Config.plist设置Misc-&gt;Boot-&gt; PickerMode =External</p>
+<p>要编译NdkBootPicker.efi，请在终端上运行“ ./ndk-macbuild.tool”（需要安装Xcode和Xcode命令行工具，并在编译之前打开xcode接受许可协议）。</p>
+<p>Bios日期/时间，OpenCore版本可以通过空格键显示。<br>
+屏幕快照可以使用F10拍摄。</p>
+<p>在oc config.plist 中 PollAppleHotKeys 和 KeySupport 需要为YES以使用苹果原生快捷键。<br>
+ShowPicker 为NO跳过倒计时<br>
+并在启动参数删除-v<br>
+来提升体验</p>
+<p>苹果原生快捷键：<br>
+cmd+v：启用-v跑码<br>
+cmd+opt+p+r：重置NVRAM<br>
+cmd+r：启动恢复分区<br>
+cmd+s：启动至单用户模式<br>
+option/alt：在ShowPicker设置成NO时显示引导项选择界面，ALT不可用时可用ESC代替<br>
+cmd+c+-：关闭主板兼容性检查, 等同于添加引导标识符 -no_compat_check<br>
+Shift: 安全模式</p>
+<p>我需要在开机后马上开始不停按option/alt或者ESC来显示引导界面来检查这个GUI是否生效，并使用F10拍摄快照。<br>
+以下为GUI效果<br>
+<img src="https://ubun222.github.io/post-images/1588682315606.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于 这个博客是怎么来的]]></title>
         <id>https://ubun222.github.io/post/helloblog/</id>
