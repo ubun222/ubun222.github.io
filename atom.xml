@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ubun222.github.io</id>
     <title>Gridea</title>
-    <updated>2020-05-05T13:06:44.451Z</updated>
+    <updated>2020-05-07T15:05:55.970Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ubun222.github.io"/>
     <link rel="self" href="https://ubun222.github.io/atom.xml"/>
@@ -10,6 +10,42 @@
     <logo>https://ubun222.github.io/images/avatar.png</logo>
     <icon>https://ubun222.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Mac如何安装homebrew]]></title>
+        <id>https://ubun222.github.io/post/mac-ru-he-an-zhuang-homebrew/</id>
+        <link href="https://ubun222.github.io/post/mac-ru-he-an-zhuang-homebrew/">
+        </link>
+        <updated>2020-05-07T14:50:11.000Z</updated>
+        <content type="html"><![CDATA[<p>首先百度搜索homebrew，即可进入其官网<br>
+官网是这么介绍的：<br>
+使用 Homebrew 安装 Apple（或您的 Linux 系统）没有预装但 你需要的东西。<br>
+完全基于 Git 和 Ruby，所以自由修改的同时你仍可以轻松撤销你的变更或与上游更新合并。<br>
+使 macOS（或您的 Linux 系统）更完整。</p>
+<p>安装仅需要在终端输入：<br>
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</p>
+<p>安装时仅需要输入以上代码，但是终端提示<br>
+curl: (7) Failed to connect to 127.0.0.1 port 1086: Connection refused<br>
+因为服务器在国外，所以无法直接下载安装。但是发现使用了科学上网工具终端也无法连接。<br>
+百度后资料说明：<br>
+在 Unix 终端，有三个和代理相关的环境变量，分别为 http_proxy, https_proxy 和all_proxy。粗略来说，http_proxy 和 https_proxy 分别用来设置 http 和 https连接的代理，all_proxy 设置所有连接的代理。<br>
+虽然不明觉厉，但还好接下来有一段代码：export https_proxy=&quot;socks5://127.0.0.1:1087&quot;<br>
+注意：1087为本地Socks5监听端口，不同软件是不同的。请在科学上网软件内的高级设置内查看。</p>
+<p>在输入这行代码后，再输入安装代码就可以了。</p>
+<p>不仅安装homebrew需要设置终端代理，在git clone时，下载速度比较慢的时候，也可以使用。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何自制mac动态桌面]]></title>
+        <id>https://ubun222.github.io/post/ru-he-zi-zhi-mac-dong-tai-zhuo-mian/</id>
+        <link href="https://ubun222.github.io/post/ru-he-zi-zhi-mac-dong-tai-zhuo-mian/">
+        </link>
+        <updated>2020-05-07T13:56:54.000Z</updated>
+        <content type="html"><![CDATA[<p>  有两种不同的动态桌面：一是像Catalina和Mojave随时间变化的壁纸，想实现随时间变化，也有两种方法。第二种动态桌面就是动态壁纸，可以像视频一样播放。</p>
+<p>  这里我先介绍第一种随时间变化壁纸中最容易实现的方法，在 设置 中的 桌面与屏幕保护程序 项中左下点击 加号 ，添加指定的图片文件夹，在下方 更改图片 打勾即可。<br>
+  还有另外一种较复杂也更像mac原生的动态桌面，它不只是定时换壁纸，用过最新的Mac os x系统，就会感觉到其壁纸变化的时间点非常合时宜，从Mac自带的动态桌面 .HEIF格式照片 破译的代码来看，在一系列的壁纸中(16张同一地点但不同光照的照片)，代码还记录了拍摄时的太阳高度角和方位角等等信息。通过系统设置所知的纬度信息和时间信息就可以计算出太阳高度角，即太阳光与地平面夹角，就可以实时在许多壁纸中选择光照最为接近的一张图片作为壁纸。那么该如何自己制作呢？也有两种途径，一种是Dynaper这个软件。还有一种通过终端实现，但是首先需要安装homebrew。<br>
+  </p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[一些HTML中的空格]]></title>
         <id>https://ubun222.github.io/post/yi-xie-html-zhong-de-kong-ge/</id>
