@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://ubun222.github.io/favicon.ico?v=1588864039970">
+<link rel="shortcut icon" href="https://ubun222.github.io/favicon.ico?v=1588912393462">
 <link rel="stylesheet" href="https://ubun222.github.io/styles/main.css">
 
 
@@ -29,7 +29,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://ubun222.github.io">
-        <img src="https://ubun222.github.io/images/avatar.png?v=1588864039970" class="site-logo">
+        <img src="https://ubun222.github.io/images/avatar.png?v=1588912393462" class="site-logo">
         <h1 class="site-title">Gridea</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -97,7 +97,8 @@
             <div class="post-content" v-pre>
               <p>  有两种不同的动态桌面：一是像Catalina和Mojave随时间变化的壁纸，想实现随时间变化，也有两种方法。第二种动态桌面就是动态壁纸，可以像视频一样播放。</p>
 <p>  这里我先介绍第一种随时间变化壁纸中最容易实现的方法，在 设置 中的 桌面与屏幕保护程序 项中左下点击 加号 ，添加指定的图片文件夹，在下方 更改图片 打勾即可。<br>
-  还有另外一种较复杂也更像mac原生的动态桌面，它不只是定时换壁纸，用过最新的Mac os x系统，就会感觉到其壁纸变化的时间点非常合时宜，从Mac自带的动态桌面 .HEIF格式照片 破译的代码来看，在一系列的壁纸中(16张同一地点但不同光照的照片)，代码还记录了拍摄时的太阳高度角和方位角等等信息。通过系统设置所知的纬度信息和时间信息就可以计算出太阳高度角，即太阳光与地平面夹角，就可以实时在许多壁纸中选择光照最为接近的一张图片作为壁纸。那么该如何自己制作呢？也有两种途径，一种是Dynaper这个软件。还有一种通过终端实现，但是首先需要安装homebrew。<br>
+  还有另外一种较复杂也更像mac原生的动态桌面，它不只是定时换壁纸，用过最新的Mac os x系统，就会感觉到其壁纸变化的时间点非常合时宜，从Mac自带的动态桌面 .HEIF格式照片 破译的代码来看，在一系列的壁纸中(16张同一地点但不同光照的照片)，代码还记录了拍摄时的太阳高度角和方位角等等信息。通过系统设置所知的纬度信息和时间信息就可以计算出太阳高度角，即太阳光与地平面夹角，就可以实时在许多壁纸中选择光照最为接近的一张图片作为壁纸。那么该如何自己制作呢？<br>
+  制作也有两种途径，可以在  动态壁纸俱乐部  https://dynamicwallpaper.club/create 网页中制作生成。还可以通过终端实现，在安装了Homebrew后，通过输入 brew tap mczachurski/wallpapper &amp;&amp; brew install wallpapper 代码安装wallpapper命令行工具。其使用教程在https://github.com/mczachurski/wallpapper/blob/master/README.md。<br>
   </p>
 
             </div>
