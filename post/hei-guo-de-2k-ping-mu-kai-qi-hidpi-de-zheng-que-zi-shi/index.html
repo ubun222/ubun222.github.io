@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://ubun222.github.io/favicon.ico?v=1589116454736">
+<link rel="shortcut icon" href="https://ubun222.github.io/favicon.ico?v=1589122023559">
 <link rel="stylesheet" href="https://ubun222.github.io/styles/main.css">
 
 
@@ -18,8 +18,7 @@
 
 
 
-    <meta name="description" content="我
-" />
+    <meta name="description" content="Mac OS X系统中，只有4K屏幕及以上才能开启HIDPI，2k屏幕在2k分辨率下 窗口图标字体显得十分小，看起来很不舒适。网上也有一些手动开启HIDPI的教程，其中最广为人知也最为简单的是GitHub xzhih大佬的one-key-h..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -29,7 +28,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://ubun222.github.io">
-        <img src="https://ubun222.github.io/images/avatar.png?v=1589116454736" class="site-logo">
+        <img src="https://ubun222.github.io/images/avatar.png?v=1589122023559" class="site-logo">
         <h1 class="site-title">Cblog</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -95,7 +94,53 @@
             <div class="post-date">2020-05-10</div>
             
             <div class="post-content" v-pre>
-              <p>我</p>
+              <p>Mac OS X系统中，只有4K屏幕及以上才能开启HIDPI，2k屏幕在2k分辨率下 窗口图标字体显得十分小，看起来很不舒适。网上也有一些手动开启HIDPI的教程，其中最广为人知也最为简单的是GitHub xzhih大佬的one-key-hidpi 一行代码即可开启关闭hidpi。代码如下：<br>
+bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)&quot;</p>
+<p>我在尝试了几次后，我的2K屏幕使用自定义分辨率为2208x1242获得了良好的体验。但仍存在一些问题，比如开机跑完代码后就会出现大苹果，在关闭啰嗦模式来提升使用体验时 苹果标志变大是我无法接受的。但我了解到手动添加缩放分辨率就不会有大苹果的问题，偶然我又得到了大佬的一键hidpi源码，于是我就萌生了一探究竟的想法。<br>
+（以下为本小白的思考过程，仅供参考）<br>
+经过我一而再再而三的检查代码，发现了一些有价值的信息：<br>
+要修改的显示器配置相关文件夹位置：/系统/资源库/Displays/Contents/Resources/Overrides/<br>
+一些命令：<br>
+sudo mount -uw / &amp;&amp; killall Finder   一定要先执行否则无法粘贴覆盖系统文件（大佬的一部分代码都是在复制粘贴，可能一是因为无法编辑系统文件，二是直接复制粘贴更为简单粗暴）<br>
+ioreg -l | grep &quot;DisplayVendorID&quot;   提取显示器供应商ID<br>
+ioreg -l | grep &quot;DisplayProductID&quot;    提取显示器产品ID<br>
+ioreg -lw0 | grep -i &quot;IODisplayEDID&quot; | sed -e &quot;/[^&lt;]*&lt;/s///&quot; -e &quot;s/&gt;//&quot;  提取显示器EDID<br>
+hidpi=$(printf '%08x %08x' <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mo>(</mo></mrow><annotation encoding="application/x-tex">((</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mopen">(</span></span></span></span>{width}*2)) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mo>(</mo></mrow><annotation encoding="application/x-tex">((</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mopen">(</span></span></span></span>{height}*2)) | xxd -r -p | base64) 这行生成了系统将读取的文件内的有关分辨率的信息（分辨率乘以2似乎和HIDPI有关）<br>
+假如我在终端提示中输入了2208x1242拿出来在bash单独运行就是<br>
+printf '%08x %08x' 4416 2484 | xxd -r -p | base64<br>
+输出为：AAARQAAACbQ=<br>
+据说同时也需要一个 2208x1242<br>
+printf '%08x %08x' 2208 1242 | xxd -r -p | base64<br>
+输出为：AAAIoAAABNo=<br>
+将以上两个代码都分别加到 DisplayProductID-xx文件内容 scale-resolutions下方的两个data中间<br>
+如：scale-resolutions<br>
+array<br>
+data<br>
+AAARQAAACbQ=<br>
+data<br>
+data<br>
+AAAIoAAABNo=<br>
+data<br>
+这样就可以仅靠终端手动开启hidpi，并且不会有大苹果的问题。</p>
+<p>显示器文件信息如EDID，DisplayVendorID，DisplayProductID，文件夹及文件名称，甚至分辨率信息都可以用hackintool直接自动生成。（hackintool生成的EDID可能与终端生成的不一样，或许hackintool自动修补了原EDID)。</p>
+<p>也就是说仅靠hackintool生成的文件夹覆盖原文件夹即可添加分辨率。所以真正的教程在下面。。。</p>
+<p>至于hackintool如何生成显示器文件在hackintool帮助中有介绍：<br>
+显示器EDID修补<br>
+使用EDID修补你可以进行显示器型号的修改以及添加缩放选项。操作方法如下：<br>
+1.从显示列表中选择你要编辑的显示器<br>
+2.如果显示器的EDID没有分辨率范围或不好，有选择性地添加/修复分辨率范围<br>
+3.单击“添加”按钮添加分辨率，再单击分辨率值进行编辑。选中某个分辨率值再点击“删除”按钮即可删除此分辨率。<br>
+4.编辑完成后，点击“导出”按钮在桌面上生成修改好的补丁文件。<br>
+安装<br>
+安装EDID补丁有两种方法：安装显示器补丁文件，以及显示器驱动：<br>
+安装显示器补丁文件：<br>
+将生成的DisplayVendorID-x文件夹复制到/system/library/displays/contents/resources/overrides（对于El Capitan系统则是/system/library/displays/overrides ）<br>
+将生成的icons.plist复制到/system/library/displays/contents/resources/overrides（对于El Capitan则是/system/library/displays/overrides）<br>
+安装显示器驱动：<br>
+将生成的DisplayEDID-x-x.kext复制到/library/extensions或efi/clover/kexts/other（取决于您的配置）<br>
+注意：在复制文件之前，请先关闭系统完整性保护（SIP)</p>
+<p>如上是hackintool修补edid的教程，但也能增加缩放分辨率。如果hackintool生成的显示器文件夹覆盖后无效或者有问题，再可以仔细查看我记录的一些命令。两者（hackintool添加分辨率生成显示器文件夹覆盖和终端输出编码编辑加入显示器文件）亲测都有效，但是没有深入实验。有一些无法确定的点。。等着黑友们来继续研究。。。</p>
+<p>我只研究了一键hidpi代码，其他的任何手动打开hidpi教程我都不清楚，所以请看官们不喜勿喷。。</p>
 
             </div>
             
