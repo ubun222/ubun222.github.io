@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Hello Gridea | Gridea</title>
+<title>OpenCore的GUI插件 | Gridea</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,15 +18,9 @@
 
 
 
-    <meta name="description" content="👏  欢迎使用 Gridea ！
-✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...
-
-Github
-Gridea 主页
-示例网站
-特性👇
-📝  你可以使用最酷的 Markdo..." />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="下载地址：https://github.com/n-d-k/NdkBootPicker/releases/tag/0.1.8
+用法介绍：https://github.com/n-d-k/NdkBootPicker/blob/0.1.8/RE..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -97,45 +91,47 @@ Gridea 主页
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Hello Gridea</h2>
-            <div class="post-date">2018-12-12</div>
-            
-              <div class="feature-container" style="background-image: url('https://ubun222.github.io/post-images/hello-gridea.png')">
-              </div>
+            <h2 class="post-title">OpenCore的GUI插件</h2>
+            <div class="post-date">2020-05-05</div>
             
             <div class="post-content" v-pre>
-              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+              <p>下载地址：https://github.com/n-d-k/NdkBootPicker/releases/tag/0.1.8<br>
+用法介绍：https://github.com/n-d-k/NdkBootPicker/blob/0.1.8/README.md</p>
+<p>以下为用法搬运：<br>
+NdkBootPicker.efi需要位于EFI / OC / Drivers中并设置为在config.plist中加载*<br>
+icon文件夹需要复制到EFI / OC /文件夹中。<br>
+Config.plist设置Misc-&gt;Boot-&gt; PickerMode =External</p>
+<p>要编译NdkBootPicker.efi，请在终端上运行“ ./ndk-macbuild.tool”（需要安装Xcode和Xcode命令行工具，并在编译之前打开xcode接受许可协议）。</p>
+<p>Bios日期/时间，OpenCore版本可以通过空格键显示。<br>
+屏幕快照可以使用F10拍摄。</p>
+<p>在oc config.plist 中 PollAppleHotKeys 和 KeySupport 需要为YES以使用苹果原生快捷键。<br>
+ShowPicker 为NO跳过倒计时<br>
+PickerMode =External 以使用外部GUI<br>
+并在启动参数删除-v<br>
+来提升体验</p>
+<p>苹果原生快捷键：<br>
+cmd+v：启用-v跑码<br>
+cmd+opt+p+r：重置NVRAM<br>
+cmd+r：启动恢复分区<br>
+cmd+s：启动至单用户模式<br>
+option/alt：在ShowPicker设置成NO时显示引导项选择界面，ALT不可用时可用ESC代替<br>
+cmd+c+-：关闭主板兼容性检查, 等同于添加引导标识符 -no_compat_check<br>
+Shift: 安全模式</p>
+<p>我需要在开机后马上开始不停按option/alt或者ESC来显示引导界面来检查这个GUI是否生效，并使用F10拍摄快照。<br>
+以下为GUI效果<br>
+<img src="https://ubun222.github.io/post-images/1588682315606.png" alt="" loading="lazy"></p>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://ubun222.github.io/tag/R_0xZrAWK/" class="tag">
-                    Gridea
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://ubun222.github.io/post/helloblog/">
+                  <h3 class="post-title">
+                    关于 这个博客是怎么来的
+                  </h3>
+                </a>
+              </div>
             
 
             

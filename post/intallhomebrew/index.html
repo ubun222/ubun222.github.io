@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Hello Gridea | Gridea</title>
+<title>Mac如何安装homebrew | Gridea</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,15 +18,11 @@
 
 
 
-    <meta name="description" content="👏  欢迎使用 Gridea ！
-✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...
-
-Github
-Gridea 主页
-示例网站
-特性👇
-📝  你可以使用最酷的 Markdo..." />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="首先百度搜索homebrew，即可进入其官网
+官网是这么介绍的：
+使用 Homebrew 安装 Apple（或您的 Linux 系统）没有预装但 你需要的东西。
+完全基于 Git 和 Ruby，所以自由修改的同时你仍可以轻松撤销你的变更或与..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -97,45 +93,38 @@ Gridea 主页
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Hello Gridea</h2>
-            <div class="post-date">2018-12-12</div>
-            
-              <div class="feature-container" style="background-image: url('https://ubun222.github.io/post-images/hello-gridea.png')">
-              </div>
+            <h2 class="post-title">Mac如何安装homebrew</h2>
+            <div class="post-date">2020-05-07</div>
             
             <div class="post-content" v-pre>
-              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+              <p>首先百度搜索homebrew，即可进入其官网<br>
+官网是这么介绍的：<br>
+使用 Homebrew 安装 Apple（或您的 Linux 系统）没有预装但 你需要的东西。<br>
+完全基于 Git 和 Ruby，所以自由修改的同时你仍可以轻松撤销你的变更或与上游更新合并。<br>
+使 macOS（或您的 Linux 系统）更完整。</p>
+<p>安装仅需要在终端输入：<br>
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</p>
+<p>但是终端提示：<br>
+curl: (7) Failed to connect to 127.0.0.1 port 1086: Connection refused<br>
+因为服务器在国外，所以无法直接下载安装。但是发现使用了科学上网工具终端也无法连接。<br>
+百度后资料说明：<br>
+在 Unix 终端，有三个和代理相关的环境变量，分别为 http_proxy, https_proxy 和all_proxy。粗略来说，http_proxy 和 https_proxy 分别用来设置 http 和 https连接的代理，all_proxy 设置所有连接的代理。<br>
+虽然不明觉厉，但还好接下来有一段代码：export https_proxy=&quot;socks5://127.0.0.1:1087&quot;<br>
+注意：1087为本地Socks5监听端口，不同软件是不同的。请在科学上网软件的高级设置内查看。</p>
+<p>在输入这行代码后，再输入安装代码就可以了。</p>
+<p>不仅安装homebrew需要设置终端代理，在git clone时，下载速度比较慢的时候，也可以使用。</p>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://ubun222.github.io/tag/R_0xZrAWK/" class="tag">
-                    Gridea
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://ubun222.github.io/post/desktoppaper/">
+                  <h3 class="post-title">
+                    如何自制mac动态桌面
+                  </h3>
+                </a>
+              </div>
             
 
             

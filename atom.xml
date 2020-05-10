@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ubun222.github.io</id>
     <title>Gridea</title>
-    <updated>2020-05-08T16:07:37.224Z</updated>
+    <updated>2020-05-10T11:43:23.913Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ubun222.github.io"/>
     <link rel="self" href="https://ubun222.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[Mac如何安装homebrew]]></title>
-        <id>https://ubun222.github.io/post/mac-ru-he-an-zhuang-homebrew/</id>
-        <link href="https://ubun222.github.io/post/mac-ru-he-an-zhuang-homebrew/">
+        <id>https://ubun222.github.io/post/intallhomebrew/</id>
+        <link href="https://ubun222.github.io/post/intallhomebrew/">
         </link>
         <updated>2020-05-07T14:50:11.000Z</updated>
         <content type="html"><![CDATA[<p>首先百度搜索homebrew，即可进入其官网<br>
@@ -36,8 +36,8 @@ curl: (7) Failed to connect to 127.0.0.1 port 1086: Connection refused<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[如何自制mac动态桌面]]></title>
-        <id>https://ubun222.github.io/post/ru-he-zi-zhi-mac-dong-tai-zhuo-mian/</id>
-        <link href="https://ubun222.github.io/post/ru-he-zi-zhi-mac-dong-tai-zhuo-mian/">
+        <id>https://ubun222.github.io/post/desktoppaper/</id>
+        <link href="https://ubun222.github.io/post/desktoppaper/">
         </link>
         <updated>2020-05-07T13:56:54.000Z</updated>
         <content type="html"><![CDATA[<p>  有两种不同的动态桌面：一是像Catalina和Mojave随时间变化的壁纸，想实现随时间变化，也有两种方法。第二种动态桌面就是动态壁纸，可以像视频一样播放。</p>
@@ -49,8 +49,8 @@ curl: (7) Failed to connect to 127.0.0.1 port 1086: Connection refused<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[一些HTML中的空格]]></title>
-        <id>https://ubun222.github.io/post/yi-xie-html-zhong-de-kong-ge/</id>
-        <link href="https://ubun222.github.io/post/yi-xie-html-zhong-de-kong-ge/">
+        <id>https://ubun222.github.io/post/blankspace/</id>
+        <link href="https://ubun222.github.io/post/blankspace/">
         </link>
         <updated>2020-05-05T12:33:34.000Z</updated>
         <content type="html"><![CDATA[<p>&amp; nbsp; <br>
@@ -68,8 +68,8 @@ curl: (7) Failed to connect to 127.0.0.1 port 1086: Connection refused<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[OpenCore的GUI插件]]></title>
-        <id>https://ubun222.github.io/post/opencore-de-gui-cha-jian/</id>
-        <link href="https://ubun222.github.io/post/opencore-de-gui-cha-jian/">
+        <id>https://ubun222.github.io/post/opencoregui/</id>
+        <link href="https://ubun222.github.io/post/opencoregui/">
         </link>
         <updated>2020-05-05T11:53:17.000Z</updated>
         <content type="html"><![CDATA[<p>下载地址：https://github.com/n-d-k/NdkBootPicker/releases/tag/0.1.8<br>
