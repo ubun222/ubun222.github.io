@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ubun222.github.io</id>
     <title>Cblog</title>
-    <updated>2020-05-10T14:47:12.221Z</updated>
+    <updated>2020-05-10T15:21:22.944Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ubun222.github.io"/>
     <link rel="self" href="https://ubun222.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Cblog</rights>
     <entry>
         <title type="html"><![CDATA[黑果的2K屏幕开启HIDPI的正确姿势]]></title>
-        <id>https://ubun222.github.io/post/hei-guo-de-2k-ping-mu-kai-qi-hidpi-de-zheng-que-zi-shi/</id>
-        <link href="https://ubun222.github.io/post/hei-guo-de-2k-ping-mu-kai-qi-hidpi-de-zheng-que-zi-shi/">
+        <id>https://ubun222.github.io/post/2khidpi/</id>
+        <link href="https://ubun222.github.io/post/2khidpi/">
         </link>
         <updated>2020-05-10T12:47:37.000Z</updated>
         <content type="html"><![CDATA[<p>Mac OS X系统中，只有4K屏幕及以上才能开启HIDPI，2k屏幕在2k分辨率下 窗口图标字体显得十分小，看起来很不舒适。网上也有一些手动开启HIDPI的教程，其中最广为人知也最为简单的是GitHub xzhih大佬的one-key-hidpi 一行代码即可开启关闭hidpi。代码如下：<br>
