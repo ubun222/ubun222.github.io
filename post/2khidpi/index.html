@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://ubun222.github.io/favicon.ico?v=1589397571383">
+<link rel="shortcut icon" href="https://ubun222.github.io/favicon.ico?v=1589397630471">
 <link rel="stylesheet" href="https://ubun222.github.io/styles/main.css">
 
 
@@ -28,7 +28,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://ubun222.github.io">
-        <img src="https://ubun222.github.io/images/avatar.png?v=1589397571383" class="site-logo">
+        <img src="https://ubun222.github.io/images/avatar.png?v=1589397630471" class="site-logo">
         <h1 class="site-title">Cblog</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -103,13 +103,13 @@
 •ioreg -l | grep &quot;DisplayProductID&quot;    提取显示器产品ID<br>
 •ioreg -lw0 | grep -i &quot;IODisplayEDID&quot; | sed -e &quot;/[^&lt;]*&lt;/s///&quot; -e &quot;s/&gt;//&quot;  提取显示器EDID<br>
 •hidpi=$(printf '%08x %08x' <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mo>(</mo></mrow><annotation encoding="application/x-tex">((</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mopen">(</span></span></span></span>{width}*2)) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mo>(</mo></mrow><annotation encoding="application/x-tex">((</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mopen">(</span></span></span></span>{height}*2)) | xxd -r -p | base64) 这行生成了系统将读取的文件内的有关分辨率的信息（分辨率乘以2似乎和HIDPI有关）<br>
-假如我在终端提示中输入了2208x1242拿出来在bash单独运行就是<br>
-•printf '%08x %08x' 4416 2484 | xxd -r -p | base64<br>
+•假如我在终端提示中输入了2208x1242拿出来在bash单独运行就是<br>
+printf '%08x %08x' 4416 2484 | xxd -r -p | base64<br>
 输出为：AAARQAAACbQ=<br>
 •据说同时也需要一个 2208x1242<br>
 printf '%08x %08x' 2208 1242 | xxd -r -p | base64<br>
-输出为：AAAIoAAABNo=<br>
-•将以上两个代码都分别加到 DisplayProductID-xx文件内容 scale-resolutions下方的两个data中间<br>
+输出为：AAAIoAAABNo=</p>
+<p>将以上两个代码都分别加到 DisplayProductID-xx文件内容 scale-resolutions下方的两个data中间<br>
 如：scale-resolutions<br>
 array<br>
 data<br>
