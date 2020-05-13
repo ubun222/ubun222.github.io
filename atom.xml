@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ubun222.github.io</id>
     <title>Cblog</title>
-    <updated>2020-05-13T19:11:14.445Z</updated>
+    <updated>2020-05-13T19:13:28.154Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ubun222.github.io"/>
     <link rel="self" href="https://ubun222.github.io/atom.xml"/>
@@ -101,12 +101,13 @@ curl: (7) Failed to connect to 127.0.0.1 port 1086: Connection refused<br>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[一些HTML中的空格]]></title>
+        <title type="html"><![CDATA[一些Gridea编辑的小技巧]]></title>
         <id>https://ubun222.github.io/post/blankspace/</id>
         <link href="https://ubun222.github.io/post/blankspace/">
         </link>
         <updated>2020-05-05T12:33:34.000Z</updated>
-        <content type="html"><![CDATA[<p>&amp; nbsp; <br>
+        <content type="html"><![CDATA[<p>•HTML中的空格代码<br>
+&amp; nbsp; <br>
 不换行空格 按下space键产生的空格</p>
 <p>&amp; ensp; <br>
 它等同于字体度的一半</p>
@@ -117,6 +118,8 @@ curl: (7) Failed to connect to 127.0.0.1 port 1086: Connection refused<br>
 <p>因为这个  Gridea  客户端app编辑的文章同步后，段落开头的空格全被过滤消失了，我首先是打算在GitHub网页中手动加上HTML代码来显示空格，但是只要本地客户端同步，GitHub网页上的HTML文件就被覆盖，所以只能在本地编辑文章时想办法显示空格，于是我索性直接将&amp; nbsp;输入到文章开头需要空格的地方，这个Gridea文本编辑器自动识别为HTML代码，于是问题就解决了。</p>
 <p>但是想要打出中间不带空格的 &amp; emsp; 暂时没有想到方法，所以本篇在所有的HTML代码的&amp;后都有一个空格来防止在网页中变成显示空格</p>
 <p>只是比较麻烦的解决了段落开头空格被忽略的问题</p>
+<p>•输入 • 作为开头小圆点<br>
+切换输入法为英文，按下option+8即可</p>
 ]]></content>
     </entry>
     <entry>
